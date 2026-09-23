@@ -1,11 +1,11 @@
 # Contributing to SEOShark
 
-Thanks for your interest in SEOShark. This repository is a white-label fork of the open-source [OpenSEO](https://github.com/every-app/open-seo) codebase (MIT): branding, deployment and database configuration are ours, and the SEO engine tracks upstream so improvements can be merged in.
+Thanks for your interest in SEOShark.
 
 ## Where a change belongs
 
 - **Branding, deployment, hosting, docs for this fork:** open an issue or pull request here, on `bizztor/seoshark`.
-- **The SEO engine itself** (crawler, audit rules, MCP tools, data providers): these files are merged from upstream regularly. A fix that would help every OpenSEO fork is best sent upstream as well, so it does not have to be re-applied after each merge. Open the issue here first if you are unsure; we will say where it should go.
+- **The SEO engine itself** (crawler, audit rules, MCP tools, data providers): open an issue first so we can agree on the approach before you invest in a change.
 
 ## Issues: the best way to contribute
 

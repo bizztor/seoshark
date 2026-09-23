@@ -1,7 +1,6 @@
 # Setup: from fork to first deployment
 
-This repository is a white-label product built on the OpenSEO codebase. This
-guide takes a fresh clone to a running, branded deployment on your own
+This guide takes a fresh clone to a running, branded deployment on your own
 Cloudflare account with Supabase Postgres. Read it once, top to bottom; every
 later doc assumes these steps are done.
 
@@ -40,9 +39,11 @@ emails and MCP server reads from it. Replace all `*.example` hosts. Then:
   grep -rlE "SEOShark|seoshark\.example" .agents/skills plugins .claude-plugin .cursor-plugin
   ```
 
-- The `web/` directory is the upstream marketing + docs site. It is not
-  branded and is not part of the app build. Replace it with your own site or
-  delete it; the app only needs the URLs in `brand.ts` to resolve.
+- The `web/` directory is the marketing + docs site (a separate build). Set
+  its domain in `web/src/lib/site-origin.js` and the routes in
+  `web/wrangler.jsonc`, fill the pricing page where marked, and deploy it with
+  `pnpm --dir web run deploy`. The app only needs the URLs in `brand.ts` to
+  resolve.
 
 ## 2. Local development
 
@@ -118,17 +119,3 @@ After the first deploy:
   consent (the client name and icon come from `brand.ts`).
 - Set the Autumn webhook to `https://<your app host>/api/autumn/webhook` if
   billing is enabled.
-
-## 6. Keep upstream improvements flowing
-
-Upstream is `https://github.com/every-app/open-seo` (MIT). Add it as a remote
-and merge tags periodically:
-
-```sh
-git remote add upstream https://github.com/every-app/open-seo.git
-git fetch upstream --tags
-git merge <tag>
-```
-
-Because branding is confined to `brand.ts`, the markdown templates, and the
-env/deploy files, upstream merges rarely conflict on product copy.

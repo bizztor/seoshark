@@ -1,9 +1,7 @@
 // Single source of truth for everything that names or links to the product.
 //
-// This codebase is a white-label fork of OpenSEO (https://github.com/every-app/open-seo,
-// MIT). Every user-visible product name, marketing/docs/legal link, support
-// address and outbound identifier is read from here so a rebrand is a
-// one-file change. Internal identifiers (MCP tool names, skill slugs, wrangler
+// Every user-visible product name, marketing/docs/legal link, support address
+// and outbound identifier is read from here so a rebrand is a one-file change. Internal identifiers (MCP tool names, skill slugs, wrangler
 // resource names, database ids) are deliberately NOT branded: renaming them
 // would break installed agents and orphan existing databases.
 //
@@ -44,9 +42,8 @@ export const brand = {
   userAgent: "SEOShark/1.0 (+https://seoshark.example)",
   // Tag attached to CRM contacts created at signup (Loops `source`).
   signupSource: "seoshark-signup",
-  // Anonymous self-host usage heartbeat. Upstream sends installs' counts to
-  // its own PostHog project; a white-label deployment must not phone home to
-  // upstream, so this is off unless you point it at your own project key.
+  // Anonymous self-host usage heartbeat (install counts only). Off unless
+  // pointed at your own PostHog project; it never reports anywhere else.
   selfHostTelemetry: undefined as
     | { posthogKey: string; host: string }
     | undefined,

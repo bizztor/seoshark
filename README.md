@@ -5,10 +5,8 @@ insights, backlinks, site audits, AI visibility, and an MCP server so AI agents
 (Claude Code, Codex, Cursor and friends) can run SEO workflows against the same
 data.
 
-Built on the open-source [OpenSEO](https://github.com/every-app/open-seo)
-codebase (MIT). This repository is the product base: branding, deployment and
-database configuration are ours; the SEO engine tracks upstream so
-improvements can be merged in.
+This repository is the product: application, MCP server, agent skills,
+marketing and docs site, and deployment configuration.
 
 ## Start here
 
@@ -63,10 +61,10 @@ Checks that CI runs: `pnpm ci:check` and `pnpm test`.
 - `alchemy.run.ts` Cloudflare infrastructure as code (all deploys)
 - `docs/` user-facing documentation; `maintainer-docs/` engineering notes;
   `specs/` design records
-- `web/` upstream marketing and docs site, not branded and not part of the app
-  build; replace or remove
+- `web/` marketing and docs site (separate build; set its domain in
+  `web/src/lib/site-origin.js` and `web/wrangler.jsonc`)
 - `plugins/`, `.claude-plugin/`, `.agents/skills/` agent skills and plugin
-  packaging inherited from upstream
+  packaging
 
 ## Costs
 
@@ -77,4 +75,6 @@ development; use a paid project for production.
 
 ## License
 
-MIT, see [`LICENSE`](./LICENSE). Retain the upstream copyright notice.
+MIT, see [`LICENSE`](./LICENSE). The codebase includes work originally
+published under the MIT License by Ben Senescu; that notice must stay in
+`LICENSE` in every copy.
