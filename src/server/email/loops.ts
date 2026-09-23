@@ -69,7 +69,6 @@ async function sendLoopsTransactionalEmail({
   const errorPayload = await response.json().catch(() => null);
   console.error("Loops transactional email error:", {
     status: response.status,
-    email,
     transactionalId,
     errorPayload,
   });
@@ -102,7 +101,7 @@ export async function upsertHostedSignupContact({
     payload: {
       email,
       userId,
-      source: "openseo-signup",
+      source: brand.signupSource,
       userGroup: "app-user",
       ...getContactNameParts(name),
     },

@@ -8,13 +8,10 @@ import { loadLocalEnv } from "./scripts/cli-utils";
 // transaction pooler, which cannot run migrations). See docs/DATABASE_SUPABASE.md.
 loadLocalEnv();
 
+// `db:generate:pg` needs no database; only `db:migrate:pg` connects, and it
+// fails with drizzle-kit's own error when the URL is empty.
 const migrationUrl =
-  process.env.POSTGRES_DATABASE_URL || process.env.DATABASE_URL;
-if (!migrationUrl) {
-  throw new Error(
-    "Set POSTGRES_DATABASE_URL (or DATABASE_URL) to run Postgres migrations.",
-  );
-}
+  process.env.POSTGRES_DATABASE_URL || process.env.DATABASE_URL || "";
 
 export default defineConfig({
   dialect: "postgresql",

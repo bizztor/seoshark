@@ -1,5 +1,5 @@
 {
-  "name": "openseo",
+  "name": "seoshark",
   "owner": {
     "name": "SEOShark",
     "email": "support@seoshark.example"
@@ -9,8 +9,8 @@
   },
   "plugins": [
     {
-      "name": "openseo",
-      "source": "plugins/openseo",
+      "name": "seoshark",
+      "source": "plugins/seoshark",
       "description": "Real SEO data for your agent: keyword research, competitor research, backlinks, rank tracking, and site audits."
     }
   ]

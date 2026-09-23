@@ -30,7 +30,7 @@ emails and MCP server reads from it. Replace all `*.example` hosts. Then:
   `brand.name` by hand).
 - Host a `social-card.jpg` and the 512px icon at the URLs you set in
   `brand.ts`, on your marketing site.
-- The agent skills and plugin manifests (`.agents/skills/`, `plugins/openseo/`,
+- The agent skills and plugin manifests (`.agents/skills/`, `plugins/seoshark/`,
   `.claude-plugin/`, `.cursor-plugin/`) are static files installed into users'
   agents, so they carry the brand values literally. After changing `brand.ts`,
   search-and-replace the old name and hosts there and run

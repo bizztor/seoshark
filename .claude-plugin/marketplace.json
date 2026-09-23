@@ -1,5 +1,5 @@
 {
-  "name": "openseo",
+  "name": "seoshark",
   "owner": {
     "name": "SEOShark",
     "url": "https://seoshark.example"
@@ -7,8 +7,8 @@
   "description": "SEOShark's official Claude Code plugin marketplace.",
   "plugins": [
     {
-      "name": "openseo",
-      "source": "./plugins/openseo",
+      "name": "seoshark",
+      "source": "./plugins/seoshark",
       "description": "Real SEO data for your agent: keyword research, competitor research, backlinks, rank tracking, and site audits.",
       "category": "SEO"
     }

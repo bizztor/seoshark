@@ -121,7 +121,7 @@ const productFactSheet = productFactSheetTemplate
   .replaceAll("{{appUrl}}", brand.appUrl)
   .replaceAll("{{supportEmail}}", brand.supportEmail);
 
-// Adapt one OpenSEO tool into an AI SDK tool. The shared handler receives the
+// Adapt one of our MCP tools into an AI SDK tool. The shared handler receives the
 // same explicit auth context as the MCP transport, and runs through the same
 // instrumentation wrapper, so project scoping, credit metering, and the
 // mcp:tool_call telemetry (source "in_app_agent", null clientId) all match the
@@ -310,7 +310,7 @@ function scrapeTools(projectDomain: string | null): ToolSet {
 
 /**
  * Builds SAM's tool surface as an AI SDK ToolSet: the full MCP toolset plus the
- * free site-reading tools. Every tool the OpenSEO MCP server exposes is
+ * free site-reading tools. Every tool our MCP server exposes is
  * available except the ones a project-bound chat can't use (list_projects,
  * create_project) and get_project_context (already a context block). Auth and
  * billing context are passed directly to the shared tool handlers. DataForSEO

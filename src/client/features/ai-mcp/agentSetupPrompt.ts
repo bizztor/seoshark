@@ -1,9 +1,9 @@
-import installerSkill from "../../../../.agents/skills/setup-openseo/SKILL.md?raw";
+import installerSkill from "../../../../.agents/skills/setup-seoshark/SKILL.md?raw";
 import updatePrompt from "./agentUpdatePrompt.md?raw";
 import { brand } from "@/shared/brand";
 
 const skillsSourceUrl = brand.githubUrl
-  ? `${brand.githubUrl}/tree/main/plugins/openseo/skills`
+  ? `${brand.githubUrl}/tree/main/plugins/seoshark/skills`
   : `${brand.docsUrl}/agent-setup`;
 
 export const agentUpdatePrompt = updatePrompt
