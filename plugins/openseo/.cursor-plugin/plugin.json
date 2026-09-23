@@ -1,25 +1,25 @@
 {
   "name": "openseo",
   "version": "1.0.0",
-  "description": "SEO made simple. Research keywords and competitors, audit sites, track rankings, and use Search Console data from your agent.",
+  "description": "Real SEO data for your agent: keyword research, competitor research, backlinks, rank tracking, and site audits.",
   "author": {
-    "name": "Every App, Inc",
-    "email": "support@openseo.so"
+    "name": "SEOShark",
+    "email": "support@seoshark.example"
   },
-  "homepage": "https://openseo.so",
-  "repository": "https://github.com/every-app/open-seo",
+  "homepage": "https://seoshark.example",
+  "repository": "https://github.com/bizztor/seoshark",
   "license": "MIT",
   "keywords": [
     "seo",
     "keyword-research",
-    "competitor-research",
     "site-audit",
     "backlinks",
     "search-console",
     "rank-tracking",
-    "local-seo"
+    "local-seo",
+    "competitor-research"
   ],
-  "logo": "https://raw.githubusercontent.com/every-app/open-seo/main/public/transparent-logo.png",
+  "logo": "https://raw.githubusercontent.com/bizztor/seoshark/main/public/transparent-logo.png",
   "skills": "skills",
   "mcpServers": "mcp.json"
 }

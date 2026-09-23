@@ -1,3 +1,4 @@
+import { brand } from "@/shared/brand";
 import { env } from "cloudflare:workers";
 import {
   getContactNameParts,
@@ -122,7 +123,7 @@ export async function sendHostedVerificationEmail({
     email,
     transactionalId: config.verificationTemplateId,
     dataVariables: {
-      appName: "OpenSEO",
+      appName: brand.name,
       confirmationUrl,
     },
   });
@@ -150,7 +151,7 @@ export async function sendHostedInvitationEmail({
     email,
     transactionalId: templateId,
     dataVariables: {
-      appName: "OpenSEO",
+      appName: brand.name,
       inviteUrl,
       organizationName,
       inviterName,
@@ -172,7 +173,7 @@ export async function sendHostedPasswordResetEmail({
     email,
     transactionalId: config.passwordResetTemplateId,
     dataVariables: {
-      appName: "OpenSEO",
+      appName: brand.name,
       resetUrl,
     },
   });

@@ -44,8 +44,10 @@ env:
 
 jobs:
   preview:
+    # Opt-in: set the PR_PREVIEWS_ENABLED repository variable to "true" once
+    # the CLOUDFLARE_* and ENV_PREVIEW secrets exist. Fork PRs never deploy.
     if: >-
-      github.repository == 'bensenescu/open-seo' &&
+      vars.PR_PREVIEWS_ENABLED == 'true' &&
       github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     timeout-minutes: 20

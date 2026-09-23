@@ -28,6 +28,11 @@ https://YOUR_WORKER_HOSTNAME/mcp
 
 ## Telemetry
 
+> **This fork:** the heartbeat is disabled unless `selfHostTelemetry` in
+> `src/shared/brand.ts` points at your own PostHog project. Nothing is sent to
+> the upstream OpenSEO project. The rest of this section describes what is
+> collected when it is enabled.
+
 OpenSEO collects anonymized telemetry for core usage events: heartbeats with aggregate counts (installs, users, projects, feature usage) tied to a random install ID, sent every 5 minutes during the first two hours after install, then at most once daily. No URLs, keywords, prompts, emails, or IP-derived location are collected, and idle installs send nothing.
 
 Heartbeats are triggered by requests to the app or MCP server. Requests to `/api/health` do not trigger telemetry, matching Docker's behavior.

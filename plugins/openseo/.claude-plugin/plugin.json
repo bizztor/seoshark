@@ -1,14 +1,14 @@
 {
   "name": "openseo",
-  "displayName": "OpenSEO",
+  "displayName": "SEOShark",
   "version": "1.0.0",
-  "description": "Without good data, your agent gives generic advice. Keyword research, competitor research, backlinks, and site audits. All for $10/month.",
+  "description": "Real SEO data for your agent: keyword research, competitor research, backlinks, rank tracking, and site audits.",
   "author": {
-    "name": "OpenSEO",
-    "url": "https://openseo.so"
+    "name": "SEOShark",
+    "url": "https://seoshark.example"
   },
-  "homepage": "https://openseo.so",
-  "repository": "https://github.com/every-app/open-seo",
+  "homepage": "https://seoshark.example",
+  "repository": "https://github.com/bizztor/seoshark",
   "license": "MIT",
   "keywords": [
     "seo",
@@ -23,7 +23,7 @@
   "mcpServers": {
     "openseo": {
       "type": "http",
-      "url": "https://app.openseo.so/mcp"
+      "url": "https://app.seoshark.example/mcp"
     }
   }
 }
